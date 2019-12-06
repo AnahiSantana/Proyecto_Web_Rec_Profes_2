@@ -60,7 +60,7 @@ xhr.onload = function () {
         document.getElementById('numReviews').innerText = detalle.numReviews;
         document.getElementById('curso').innerText = detalle.materia;
         document.getElementById('docente').innerText = detalle.profesor;
-        document.getElementById("overall").innerText = detalle["experiencia general"];
+        document.getElementById("overall").innerText = detalle["experienciaGeneral"];
         document.getElementById("dificultad").innerText = detalle.dificultad;
         document.getElementById("preparacion").innerText = detalle.preparación;
         document.getElementById("carga").innerText = detalle["cargaTrabajo"];
@@ -202,7 +202,7 @@ reviewReq.onload = function () {
                 let i;
 
                 let temp = document.getElementById("overall" + id).children;
-                for (i = 0; i < element["experiencia general"]; i++) {
+                for (i = 0; i < element["experienciaGeneral"]; i++) {
                     temp[i].classList.remove("in");
                 }
 
@@ -336,7 +336,7 @@ reviewReq.onload = function () {
                 let i;
 
                 let temp = document.getElementById("overall" + id).children;
-                for (i = 0; i < element["experiencia general"]; i++) {
+                for (i = 0; i < element["experienciaGeneral"]; i++) {
                     temp[i].classList.remove("in");
                 }
 

@@ -132,7 +132,7 @@ function paso3(resp) {
             expedienteEstudiante: localStorage.expediente,
             profesor: profe,
             materia: materia,
-            ["experiencia general"]: ovrl,
+            ["experienciaGeneral"]: ovrl,
             dificultad: dif,
             preparación: prep,
             ["cargaTrabajo"]: carga,
@@ -229,16 +229,16 @@ function actualizarEstadisticas(newObj, res) {
     let revs = res[0].numReviews;
 
     // [{"profesor":"Oscar González","materia":"Desarrollo de Aplicaciones y Servicios Web",
-    // "numReviews":"0","experiencia general":"0","dificultad":"0","preparación":"0",
+    // "numReviews":"0","experienciaGeneral":"0","dificultad":"0","preparación":"0",
     // "cargaTrabajo":"0","flexibilidad":"0","ritmo":"0","id":1}]
 
     // alert(newObj["cargaTrabajo"]);
     let updatedObj = {
         profesor: res[0].profesor,
         materia: res[0].materia,
-        ["experiencia general"]: ((parseFloat(res[0]["experiencia general"]) * parseInt(revs) + parseInt(newObj[
-            "experiencia general"])) / (parseInt(revs) + 1)).toFixed(1),
-        dificultad: ((parseFloat(res[0]["dificultad"]) * parseInt(revs) + parseInt(newObj["experiencia general"])) / (parseInt(revs) + 1)).toFixed(1),
+        ["experienciaGeneral"]: ((parseFloat(res[0]["experienciaGeneral"]) * parseInt(revs) + parseInt(newObj[
+            "experienciaGeneral"])) / (parseInt(revs) + 1)).toFixed(1),
+        dificultad: ((parseFloat(res[0]["dificultad"]) * parseInt(revs) + parseInt(newObj["experienciaGeneral"])) / (parseInt(revs) + 1)).toFixed(1),
         preparación: ((parseFloat(res[0].preparación) * parseInt(revs) + parseInt(newObj.preparación)) / (parseInt(revs) + 1)).toFixed(1),
         ["cargaTrabajo"]: ((parseFloat(res[0]["cargaTrabajo"]) * parseInt(revs) + parseInt(newObj[
             "cargaTrabajo"])) / (parseInt(revs) + 1)).toFixed(1),
@@ -310,7 +310,7 @@ xh.onload = function () {
         document.getElementById('numReviews').innerText = detalle.numReviews;
         document.getElementById('curso').innerText = detalle.materia;
         document.getElementById('docente').innerText = detalle.profesor;
-        document.getElementById("overall").innerText = detalle["experiencia general"];
+        document.getElementById("overall").innerText = detalle["experienciaGeneral"];
         document.getElementById("dificultad").innerText = detalle.dificultad;
         document.getElementById("preparacion").innerText = detalle.preparación;
         document.getElementById("carga").innerText = detalle["cargaTrabajo"];
