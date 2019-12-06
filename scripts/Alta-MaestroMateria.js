@@ -53,10 +53,10 @@ function addMateria(datos) {
             "profesor": maestro.value,
             "materia": materia.value,
             "numReviews": "0",
-            "experiencia general": "0",
+            "experienciaGeneral": "0",
             "dificultad": "0",
             "preparación": "0",
-            "carga trabajo": "0",
+            "cargaTrabajo": "0",
             "flexibilidad": "0",
             "ritmo": "0",
         }

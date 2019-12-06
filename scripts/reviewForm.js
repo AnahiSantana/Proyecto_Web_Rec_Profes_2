@@ -135,7 +135,7 @@ function paso3(resp) {
             ["experiencia general"]: ovrl,
             dificultad: dif,
             preparación: prep,
-            ["carga trabajo"]: carga,
+            ["cargaTrabajo"]: carga,
             flexibilidad: flx,
             ritmo: rit,
             takeAgain: "",
@@ -230,9 +230,9 @@ function actualizarEstadisticas(newObj, res) {
 
     // [{"profesor":"Oscar González","materia":"Desarrollo de Aplicaciones y Servicios Web",
     // "numReviews":"0","experiencia general":"0","dificultad":"0","preparación":"0",
-    // "carga trabajo":"0","flexibilidad":"0","ritmo":"0","id":1}]
+    // "cargaTrabajo":"0","flexibilidad":"0","ritmo":"0","id":1}]
 
-    // alert(newObj["carga trabajo"]);
+    // alert(newObj["cargaTrabajo"]);
     let updatedObj = {
         profesor: res[0].profesor,
         materia: res[0].materia,
@@ -240,8 +240,8 @@ function actualizarEstadisticas(newObj, res) {
             "experiencia general"])) / (parseInt(revs) + 1)).toFixed(1),
         dificultad: ((parseFloat(res[0]["dificultad"]) * parseInt(revs) + parseInt(newObj["experiencia general"])) / (parseInt(revs) + 1)).toFixed(1),
         preparación: ((parseFloat(res[0].preparación) * parseInt(revs) + parseInt(newObj.preparación)) / (parseInt(revs) + 1)).toFixed(1),
-        ["carga trabajo"]: ((parseFloat(res[0]["carga trabajo"]) * parseInt(revs) + parseInt(newObj[
-            "carga trabajo"])) / (parseInt(revs) + 1)).toFixed(1),
+        ["cargaTrabajo"]: ((parseFloat(res[0]["cargaTrabajo"]) * parseInt(revs) + parseInt(newObj[
+            "cargaTrabajo"])) / (parseInt(revs) + 1)).toFixed(1),
         flexibilidad: ((parseFloat(res[0].flexibilidad) * parseInt(revs) + parseInt(newObj.flexibilidad)) / (parseInt(revs) + 1)).toFixed(1),
         ritmo: ((parseFloat(res[0].ritmo) * parseInt(revs) + parseInt(newObj.ritmo)) / (parseInt(revs) + 1)).toFixed(1),
         numReviews: parseInt(revs) + 1
@@ -313,7 +313,7 @@ xh.onload = function () {
         document.getElementById("overall").innerText = detalle["experiencia general"];
         document.getElementById("dificultad").innerText = detalle.dificultad;
         document.getElementById("preparacion").innerText = detalle.preparación;
-        document.getElementById("carga").innerText = detalle["carga trabajo"];
+        document.getElementById("carga").innerText = detalle["cargaTrabajo"];
         document.getElementById("flexibilidad").innerText = detalle.flexibilidad;
         document.getElementById("ritmo").innerText = detalle.ritmo;
 

@@ -63,7 +63,7 @@ xhr.onload = function () {
         document.getElementById("overall").innerText = detalle["experiencia general"];
         document.getElementById("dificultad").innerText = detalle.dificultad;
         document.getElementById("preparacion").innerText = detalle.preparación;
-        document.getElementById("carga").innerText = detalle["carga trabajo"];
+        document.getElementById("carga").innerText = detalle["cargaTrabajo"];
         document.getElementById("flexibilidad").innerText = detalle.flexibilidad;
         document.getElementById("ritmo").innerText = detalle.ritmo;
 
@@ -219,7 +219,7 @@ reviewReq.onload = function () {
 
 
                 temp = document.getElementById("carga" + id).children;
-                for (i = 0; i < element["carga trabajo"]; i++) {
+                for (i = 0; i < element["cargaTrabajo"]; i++) {
                     temp[i].classList.remove("in");
                 }
 
@@ -353,7 +353,7 @@ reviewReq.onload = function () {
 
 
                 temp = document.getElementById("carga" + id).children;
-                for (i = 0; i < element["carga trabajo"]; i++) {
+                for (i = 0; i < element["cargaTrabajo"]; i++) {
                     temp[i].classList.remove("in");
                 }
 
